@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/utlis.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>My blog</title>
+</head>
+<body>
+    <nav class="navigation max-width-1 m-auto">
+        <div class="nav-left">
+            <span><i class="fa-brands fa-blogger-b">LOG</i></span>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <form action="/search.html" method="get">
+                <input class="form-input" type="text" name="query" placeholder="search article">
+            <button class="btn">search</button>
+            </form>
+        </div>
+    </nav> 
+    <div class="max-width-1 m-auto">
+        <hr> 
+    </div>
+
+    <div class="post-content max-width-2 m-auto">
+        <h1 class="font2">If love ever decides to knock on my door again…<br>
+            <p>A Journey of Hope, Healing, and Second Chances</p></h1>
+        <br>
+        <div class="post-meta font2">
+            <div class="author-info">
+                <div>
+                    Vina's Memories
+                </div>
+                <div>
+                    1 min read | Apr 4,2024
+                </div>
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+       <p class="font2">
+        If love should grace my doorstep again, I long for a patient soul who waits expectantly, bearing not empty hands but a constellation of stars to rival my own brilliance. May they be a navigator of our shared journey, eschewing ambiguity for a clear path forward, inscribing my name in the records of our destiny.
+<br>
+<br>
+If love circles back into my life, let it be with a steadfast companion who sees beyond uncertainty, embracing our future with unwavering certainty. May they sketch my name into the fabric of their tomorrows, weaving our stories together with purpose.
+<br>
+<br>
+If love pays me another visit, let it be with someone who understands that storms may come, yet chooses to remain steadfast. May they speak not in whispers but in deeds, their actions a testament to their unwavering commitment.
+<br>
+<br>
+And if love once more knocks upon my door, may I find the courage to welcome it with open arms.
+<br>
+<br>
+<div class="post-content-img">
+    <img src="images/love.jpg" alt="article">
+</div>
+      </p>
+        
+        <div class="comment-section">
+            <h2>Comments</h2>
+            <div id="comments-container">
+                
+            </div>
+            <form id="comment-form">
+                <input type="text" id="name-input" placeholder="Your Name">
+                <input type="text" id="comment-input" placeholder="Add a comment...">
+                <br> <br>
+                <button class="post-btn" type="submit">Post Comment</button>
+            
+            </form>
+        </div>
+    </div>
+
+    <div class="max-width-1 m-auto">
+        <hr>
+    </div>
+
+    <div class="home-articles max-width-1 m-auto font2">
+        <h2>Also Recommended Articles</h2>
+        
+        <div class="row">
+            <div class="home-article info center">
+                <div class="home-article-img">
+                    <img src="images/grit.jpg" alt="article">
+                </div>
+                <div class="home-article-content font1">
+                    <a href="/post4.html">
+                        <h3>How I’m Embracing the Spiritual GRIT in My Life</h3>
+                        <p>GRIT being Grace, Responsibility, Integrity, and Trust</p>
+                    </a>
+                    <br>
+                    <div>Marilyn Flower</div>
+                    <span>6 min read | May 1, 2024</span>
+                </div> 
+            </div>
+        
+            <div class="home-article info center">
+                <div class="home-article-img">
+                    <img src="images/women.jpg" alt="article">
+                </div>
+                <div class="home-article-content font1">
+                    <a href="/search-post.html">
+                        <h3>As a Woman, I Feel Sorry. But, As a Daughter, I’m Angry</h3>
+                        <p>I had the most tough yet emotional conversation with my mother, recently. I grew up in a family who rarely talk about each other’s feelings.....</p>
+                    </a>
+                    <br>
+                    <span>Nabila A. Mirandini</span>
+                    <br>
+                    <span>2 min read |
+                        Feb 12, 2024</span>
+                </div>
+            </div>
+        
+            <div class="home-article info center">
+                <div class="home-article-img">
+                    <img src="images/men.webp" alt="article">
+                </div>
+                <div class="home-article-content font1">
+                    <a href="/post1.html">
+                        <h3>The Man’s Guide To Recognizing A High-Value Woman</h3>
+                        <p>You don’t need “plenty of fish,” just the RIGHT fish.</p>
+                    </a>
+                    <br>
+                    <div>James Michael Sama</div>
+                    <span> 8 min read | Feb 24, 2024 </span>
+                </div>
+            </div>
+        
+            </div>
+        
+    </div>
+    <div class="footer max-width-2 m-auto">
+        <p>Copyright &copy; myblog.com </p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const commentForm = document.getElementById('comment-form');
+            const nameInput = document.getElementById('name-input');
+            const commentInput = document.getElementById('comment-input');
+            const commentsContainer = document.getElementById('comments-container');
+        
+            commentForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                const name = nameInput.value.trim();
+                const commentText = commentInput.value.trim();
+                if (name !== '' && commentText !== '') {
+                    addComment(name, commentText);
+                    nameInput.value = '';
+                    commentInput.value = '';
+                }
+            });
+        
+            function addComment(name, text) {
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+                commentDiv.innerHTML = `<strong>${name}:</strong> ${text}`;
+                commentsContainer.appendChild(commentDiv);
+            }
+        });
+    </script>
+</body>
+</html>
